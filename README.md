@@ -12,6 +12,11 @@ Java JDK
 
 ### Installing
 
+Clone the repo
+```
+git clone https://github.com/johnB96/college.git
+```
+
 Building using gradle from the /college directory
 
 #### Linux
