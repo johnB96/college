@@ -45,6 +45,10 @@ Note that boarding is true by default.
 ```
 GET http://localhost:8080/v1/cost?college=Purdue%20University,%20West%20Lafayette
 ```
+or
+```
+GET http://localhost:8080/v1/cost?college=Purdue%20University,%20West%20Lafayette&boarding=true
+```
 
 returns 200 status and results in
 ```
@@ -72,7 +76,10 @@ If college is omitted or empty
 
 ```
 GET http://localhost:8080/v1/cost
-GET http://localhost:8080/v1/cost&college=
+```
+or
+```
+GET http://localhost:8080/v1/cost?college=
 ```
 returns 400 status and results in
 ```
