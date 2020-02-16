@@ -5,7 +5,7 @@ import com.bedalov.college.datastore.CollegeEntity;
 public class CollegeResponse {
 
     private final String college;
-    private final double cost;
+    private final String cost;
     private final boolean boarding;
 
     static CollegeResponse getInstance(CollegeEntity collegeEntity, boolean boarding) {
@@ -13,10 +13,14 @@ public class CollegeResponse {
         if (boarding) {
             cost += collegeEntity.getRoomAndBoard();
         }
-        return new CollegeResponse(collegeEntity.getCollegeName(), cost, boarding);
+        return new CollegeResponse(collegeEntity.getCollegeName(), getCost(cost), boarding);
     }
 
-    private CollegeResponse(String college, double cost, boolean boarding) {
+    private static String getCost(double number) {
+        return String.format("$%.2f", number);
+    }
+
+    private CollegeResponse(String college, String cost, boolean boarding) {
         this.college = college;
         this.cost = cost;
         this.boarding = boarding;
@@ -26,7 +30,7 @@ public class CollegeResponse {
         return college;
     }
 
-    public double getCost() {
+    public String getCost() {
         return cost;
     }
 

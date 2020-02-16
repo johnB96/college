@@ -90,6 +90,6 @@ public class CollegeControllerTest {
     }
 
     private String getResult(String college, double cost, boolean boarding) {
-        return String.format("{\"college\":\"%s\",\"cost\":%f,\"boarding\":%b}", college, cost, boarding);
+        return String.format("{\"college\":\"%s\",\"cost\":\"$%.2f\",\"boarding\":%b}", college, cost, boarding);
     }
 }

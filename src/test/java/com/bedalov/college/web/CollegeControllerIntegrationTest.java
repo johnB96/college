@@ -54,8 +54,6 @@ public class CollegeControllerIntegrationTest {
     }
 
     private String getResult(String college, double cost, boolean boarding) {
-        return "{\"college\":\"" + college +
-                "\",\"cost\":" + cost +
-                ",\"boarding\":" + boarding + "}";
+        return String.format("{\"college\":\"%s\",\"cost\":\"$%.2f\",\"boarding\":%b}", college, cost, boarding);
     }
 }

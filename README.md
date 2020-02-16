@@ -59,7 +59,7 @@ returns 200 status and results in
 ```
 {
     "college": "Purdue University, West Lafayette",
-    "cost": 20833.0,
+    "cost": "$20833.00",
     "boarding": true
 }
 ```
@@ -72,7 +72,7 @@ returns 200 status and results in
 ```
 {
     "college": "Purdue University, West Lafayette",
-    "cost": 10402.0,
+    "cost": "$10402.00",
     "boarding": false
 }
 ```
@@ -107,7 +107,7 @@ curl --location --request GET 'http://localhost:8080/v1/cost?college=Purdue%20Un
 
 returns
 ```
-{"college":"Purdue University, West Lafayette","cost":20833.0,"boarding":true}
+{"college":"Purdue University, West Lafayette","cost":"$20833.00","boarding":true}
 ```
 
 ```
@@ -115,7 +115,7 @@ curl --location --request GET 'http://localhost:8080/v1/cost?college=Purdue%20Un
 ```
 returns
 ```
-{"college":"Purdue University, West Lafayette","cost":10402.0,"boarding":false
+{"college":"Purdue University, West Lafayette","cost":"$10402.00","boarding":false
 ```
 
 ## Running the tests
